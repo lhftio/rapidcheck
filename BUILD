@@ -31,6 +31,19 @@ cc_library(
 )
 
 cc_library(
+    name = "gtest",
+    strip_include_prefix =
+        "extras/gtest/include",
+    hdrs = glob([
+        "extras/gtest/include/**/*.h",
+    ]),
+    deps = [
+        "@googletest//:gtest",
+        "lib",
+    ]
+)
+
+cc_library(
     name = "rapidcheck",
     deps = [
         "boost",
