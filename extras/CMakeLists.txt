@@ -22,7 +22,7 @@ if (RC_ENABLE_BOOST OR RC_INSTALL_ALL_EXTRAS)
   add_subdirectory(boost)
 endif()
 
-option(RC_ENABLE_BOOST_TEST "Build Boost Test support" OFF)
+option(RC_ENABLE_BOOST_TEST "Build Boost Test support" ON)
 if (RC_ENABLE_BOOST_TEST OR RC_INSTALL_ALL_EXTRAS)
   add_subdirectory(boost_test)
 endif()
